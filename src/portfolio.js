@@ -24,7 +24,7 @@ const greeting = {
     name: "Prashant Bhadoria",
     message: "Software Engineer at Capgemini, building Java/JEE and Spring Boot services, batch-processing workflows, and AI-powered applications. Computer Science graduate from GLA University.",
     basedLocation: "Bengaluru, Karnataka",
-    resumeLink: "https://drive.google.com/file/d/1notL2YLVOLGan8Jv6P7rBXXPWwaPDnzu/view?usp=drive_link", // recommended: google drive file share link (change to "anyone on the internet can view")
+    resumeLink: "https://drive.google.com/file/d/1UciSB6Ad10QE23Ad1WsCzYMDVjCPNMMh/view?usp=drivesdk", // recommended: google drive file share link (change to "anyone on the internet can view")
     logo: {
         link: "images/initials.png", // use relative path from  parent directory -> ex: images/image.ext
         custom: true // takes precedence over image logo and allows for custom HTML logo (./components/Navbar.vue)
