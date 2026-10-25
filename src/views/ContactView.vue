@@ -1,30 +1,30 @@
 <template>
-    <section class="min-h-screen w-full flex flex-col" ref="contactSection" id="contact-section">
+    <section class="w-full flex flex-col pb-12" ref="contactSection" id="contact-section">
         <div class="relative flex py-5 items-center" :class="[visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm', 'transition-all motion-reduce:transition-none duration-500']">
             <div class="flex-grow border-t border-black dark:border-white border-1"></div>
             <h1 class="text-3xl font-bold px-5">📭 Contact</h1>
             <div class="flex-grow border-t border-black dark:border-white border-1"></div>
         </div>
-        <div :class="['flex flex-col my-auto transition-all motion-reduce:transition-none duration-500 delay-300', visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm']">
-            <div v-if="content.formEmbedLink">
-                <iframe :src="content.formEmbedLink" frameborder="0" marginheight="0" marginwidth="0" class="mb-10 min-h-screen w-full">Loading...</iframe>
-            </div>
-            <div v-else class="space-y-8 mx-auto">
-                <h1 class="text-3xl font-extrabold text-center">Get in Touch</h1>
-                <p v-for="msg in content.externalLink.note" class="text-slate-500 dark:text-slate-300">{{ msg }}<br/></p>
-                <div class="flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-x-5">
-                    <template v-if="content.externalLink.link.email">
-                        <a :href="'mailto:'+content.externalLink.link.email">
-                            <button class="py-2 px-6 bg-transparent border border-button-color shadow-sm shadow-button-color text-button-color hover:text-white hover:bg-button-color duration-300 focus:bg-button-color focus:text-white active:bg-button-color active:text-white">Send an Email</button>
-                        </a>
-                        <p class="text-sm mt-8 sm:mt-0 text-slate-500 dark:text-slate-300">{{ content.externalLink.responseTimeMessage }}</p>
-                    </template>
-                    <template v-else>
-                        <a :href="content.externalLink.link.other" target="_blank">
-                            <button class="py-2 px-6 bg-transparent border border-button-color shadow-sm shadow-button-color text-button-color hover:text-white hover:bg-button-color focus:bg-button-color focus:text-white active:bg-button-color active:text-white duration-300">Reach Out</button>
-                        </a>
-                    </template>
+        <div :class="['flex flex-col pt-2 transition-all motion-reduce:transition-none duration-500 delay-300', visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm']">
+            <div class="mx-auto max-w-2xl space-y-4 text-center">
+                <p class="text-slate-500 dark:text-slate-300">{{ content.intro }}</p>
+                <div class="flex flex-col items-center gap-2 text-slate-500 dark:text-slate-300">
+                    <a class="break-all hover:text-button-color" :href="`mailto:${content.email}`">{{ content.email }}</a>
+                    <a class="hover:text-button-color" :href="`tel:${content.phone.replace(/[^+\d]/g, '')}`">{{ content.phone }}</a>
+                    <p>{{ content.location }}</p>
                 </div>
+                <nav class="flex flex-wrap justify-center gap-3" aria-label="Professional profiles">
+                    <a
+                        v-for="link in content.links"
+                        :key="link.label"
+                        :href="link.url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="border border-button-color px-5 py-2 text-button-color shadow-sm shadow-button-color transition-colors duration-300 hover:bg-button-color hover:text-white focus:bg-button-color focus:text-white"
+                    >
+                        {{ link.label }}
+                    </a>
+                </nav>
             </div>
         </div>
     </section>

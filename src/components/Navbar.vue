@@ -40,6 +40,9 @@
                         <router-link class="block py-2 pl-3 pr-4 hover:text-link-color" to="/#work-section">Work</router-link>
                     </li>
                     <li :class="['transition-all motion-reduce:transition-none duration-500 delay-[200ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">
+                        <router-link class="block py-2 pl-3 pr-4 hover:text-link-color" to="/#achievements-section">Achievements</router-link>
+                    </li>
+                    <li :class="['transition-all motion-reduce:transition-none duration-500 delay-[200ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">
                         <router-link class="block py-2 pl-3 pr-4 hover:text-link-color" to="/#contact-section">Contact</router-link>
                     </li>
                     <li :class="['transition-all motion-reduce:transition-none duration-500 delay-[250ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">
@@ -71,6 +74,9 @@
                     </li>
                     <li>
                         <router-link class="block py-5  hover:text-link-color" to="/#work-section">💻 Work</router-link>
+                    </li>
+                    <li>
+                        <router-link class="block py-5 hover:text-link-color" to="/#achievements-section">Achievements</router-link>
                     </li>
                     <li>
                         <router-link class="block py-5  hover:text-link-color" to="/#contact-section">📭 Contact</router-link>

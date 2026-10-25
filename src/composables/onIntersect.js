@@ -36,5 +36,3 @@ export const onIntersect = (elementToWatch, once = true, options = { threshold: 
 
     return visible;
 };
-
-// Credit: Megan Valcour & Tim Spears - https://www.imarc.com/blog/adding-intersection-observer-to-your-vue-animation

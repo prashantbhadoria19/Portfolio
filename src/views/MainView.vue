@@ -45,6 +45,8 @@
 
 						<WorkView :content="portfolio.works" :transitions="portfolio.transitions" />
 
+						<AchievementsView :content="portfolio.certificationsAndAchievements" :transitions="portfolio.transitions" />
+
 						<ContactView :content="portfolio.contact" :transitions="portfolio.transitions" />
 
 						<footer class="hidden text-center md:block mb-5">
@@ -53,7 +55,7 @@
 					</div>
 				</div>
 				<div class="hidden col-span-1 md:flex flex-initial relative order-2 text-center md:order-none">
-					<p :class="['fixed bottom-2 right-10 origin-top-right rotate-90 transition-all motion-reduce:transition-none duration-500', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">📍 Based in Mathura, U.P</p>
+					<p :class="['fixed bottom-2 right-10 origin-top-right rotate-90 transition-all motion-reduce:transition-none duration-500', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">📍 Based in {{ portfolio.greeting.basedLocation }}</p>
 				</div>
 				<footer class="block text-center text-sm md:hidden order-last mb-5">
 					<p>🚀 Designed & Created by Prashant Bhadoria</p>
@@ -72,6 +74,7 @@ import LandingView from './LandingView.vue'
 import AboutView from './AboutView.vue'
 import ExperienceView from './ExperienceView.vue'
 import WorkView from './WorkView.vue'
+import AchievementsView from './AchievementsView.vue'
 import ContactView from './ContactView.vue'
 import SplashView from './SplashView.vue'
 

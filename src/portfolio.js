@@ -20,10 +20,10 @@ const splashScreen = true // recommended: for best behavior after refresh
 
 // --- 👋 Greeting Section ---
 const greeting = {
-    intro: "Hello 👋, my name is",
+    intro: "Hello 👋, I'm",
     name: "Prashant Bhadoria",
-    message: "I'm a computer science student and an aspiring software engineer. Currently working as a web developer at my university building tools to aid students, educators, and staff.",
-    basedLocation: "Mathura, UP",
+    message: "Software Engineer at Capgemini, building Java/JEE and Spring Boot services, batch-processing workflows, and AI-powered applications. Computer Science graduate from GLA University.",
+    basedLocation: "Bengaluru, Karnataka",
     resumeLink: "https://drive.google.com/file/d/1notL2YLVOLGan8Jv6P7rBXXPWwaPDnzu/view?usp=drive_link", // recommended: google drive file share link (change to "anyone on the internet can view")
     logo: {
         link: "images/initials.png", // use relative path from  parent directory -> ex: images/image.ext
@@ -40,18 +40,30 @@ const socialMediaLinks = {
 // --- 😎 About Section ---
 const about = {
     autobiography: [
-        "My name is Prashant Bhadoria and I'm a computer science student at GLA University, Mathura. I have a passion for coding in languages such as C++, Java, Python, C. Work in web development and have experience with MERN Stack.",
-        "Responsible, organized, problem solver, and independent thinker. Work well in a team and a quick learner. Programming for 3+ years."
-    ], // Separated items are paragraphs
-    techStack: [
-        "C++",
-        "Java",
-        "Python",
-        "JavaScript",
-        "React.js",
-        "MongoDB",
-        "HTML",
-        "CSS",
+        "I'm Prashant Bhadoria, a software engineer at Capgemini in Bengaluru and a Computer Science graduate from GLA University. I build Java/JEE and Spring Boot services, batch-processing workflows, and reliable REST APIs.",
+        "My experience spans backend development, performance tuning, production support, and CI/CD. I also build AI agents and RAG-based applications, and enjoy solving problems across the full software lifecycle."
+    ],
+    skillGroups: [
+        {
+            category: "Core",
+            items: ["Backend Development", "REST APIs", "Batch Processing", "CI/CD", "AI Agents", "RAG", "Data Structures and Algorithms"]
+        },
+        {
+            category: "Languages",
+            items: ["Java", "Python", "JavaScript", "TypeScript", "SQL"]
+        },
+        {
+            category: "Frameworks & ML",
+            items: ["Spring Boot", "Spring Batch", "Hibernate/JPA", "JUnit", "React.js", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "Streamlit", "scikit-learn", "NLTK", "Pandas"]
+        },
+        {
+            category: "Databases & Messaging",
+            items: ["Oracle", "PostgreSQL", "pgvector", "Redis", "Kafka", "Firebase"]
+        },
+        {
+            category: "CI/CD & Tools",
+            items: ["Maven", "Jenkins", "Clarive", "SVN", "Git", "Docker", "SoapUI", "Postman", "Bruno", "Oracle SQL Developer", "GitHub Copilot"]
+        }
     ],
     photo1Link:"images/profile6.jpeg",
     photo2Link: "images/profile2.jpg",
@@ -62,21 +74,69 @@ const about = {
 // --- 🛡️ Experience Section ---
 const experiences = [
     {
-        position: "Android and iOS App Developer",
+        position: "Software Engineer (A4)",
         company: {
-            name: "Atirun Techs Pvt Limited",
-            link: "https://tools.wolftech.ncsu.edu/support/index.php/WolfTech_Information_Technology"
+            name: "Capgemini India Private Limited",
+            link: "https://www.capgemini.com/"
         },
-        duration: "June 2023 - July 2023",
+        duration: "Jun 2025 - Present · Bengaluru, Karnataka",
         bulletPoints: [
-            "o	Integrated third-party music APIs to fetch and display real-time music data, improving the app's content diversity and freshness.",
-            "Conducted rigorous testing and debugging to identify and resolve issues related to audio playback, network connectivity, and UI responsiveness.",
+            "Delivered 25+ releases across 3+ environments, building Java/JEE and Spring Boot services with Hibernate/JPA, JUnit, and Maven.",
+            "Built Spring Batch chunk-based jobs to reliably bulk-load millions of records into Oracle.",
+            "Reduced API response time by 35% by fixing JPA N+1 queries with fetch joins and adding Oracle indexes.",
+            "Cut production recovery time by 30% by root-causing live defects and shipping 10+ rollback-safe hotfixes.",
+            "Standardized CI pipelines on SVN, Jenkins, and Clarive, with nightly SoapUI, Postman, and Bruno test suites.",
+            "Wrote 10+ Oracle SQL migration and rollback scripts, and developed 10+ AI agents and Copilot instruction files."
         ],
         hashtags: [
-            "React Native",
-            "Expo",
-            "NPM",
+            "Java/JEE",
+            "Spring Boot",
+            "Spring Batch",
+            "Oracle",
+            "Jenkins",
+            "AI Agents"
+        ]
+    },
+    {
+        position: "Software Engineer Intern",
+        company: {
+            name: "Capgemini India Private Limited",
+            link: "https://www.capgemini.com/"
+        },
+        duration: "Mar 2025 - May 2025 · Bengaluru, Karnataka",
+        bulletPoints: [
+            "Fixed 8+ issues in Java/JEE modules built with Maven during development and staging validation.",
+            "Validated 5+ SQL scripts and rollback scripts across 2 environments before database rollouts.",
+            "Maintained 20+ API test cases in SoapUI, Postman, and Bruno to speed up patch validation.",
+            "Wrote Markdown onboarding guides to help new joiners set up the project faster."
+        ],
+        hashtags: [
+            "Java/JEE",
+            "Maven",
+            "SQL",
+            "SoapUI",
+            "Postman",
+            "Bruno"
+        ]
+    },
+    {
+        position: "Web Developer Intern",
+        company: {
+            name: "Atirun Techs"
+        },
+        duration: "Jan 2025 - Mar 2025 · Noida, Uttar Pradesh",
+        bulletPoints: [
+            "Built CRM features including secure authentication and 5+ validated dynamic forms, replacing manual data entry.",
+            "Developed 3 analytics dashboards with charts and filters to replace manual spreadsheet reporting.",
+            "Created 20+ reusable, responsive components with React.js and Tailwind CSS.",
+            "Built 10+ REST endpoints with Express.js and Firebase, keeping API response times under 300ms."
+        ],
+        hashtags: [
+            "React.js",
+            "Tailwind CSS",
+            "Express.js",
             "Firebase",
+            "REST APIs"
         ]
     },
 ]
@@ -84,80 +144,110 @@ const experiences = [
 // --- 💻 Work Section ---
 const works = [
     {
-        projectName: "Smart Hiring Platform",
-        yearCompleted: "2024",
-        description: "Developed a Smart Hiring Platform leveraging the MERN stack, integrating AI-driven candidate matching, automated resume screening, real-time interview scheduling, and advanced analytics, enhancing recruitment efficiency and decision-making.",
-        techStack: "Python, MERN Stack",
+        projectName: "Code Nexus -- AI Repository Intelligence",
+        description: "Built an AI agent that uses RAG and vector embeddings to search GitHub repositories, achieving 95%+ retrieval relevance across 100K+ code tokens per query. Added SSE streaming chat for multi-turn conversations, Redis caching, and Kafka-based asynchronous indexing.",
+        techStack: "Next.js, Spring Boot, PostgreSQL, pgvector, Redis, Kafka, Docker, LLM",
         links: [
             {
-                label: "",
+                label: "GitHub",
                 type: "git",
-                url: ""
+                url: "https://github.com/prashantbhadoria19/Code-Nexus"
             },
             {
-                label: "",
+                label: "Live Demo",
                 type: "external",
-                url: ""
+                url: "https://code-nexus-teal.vercel.app/"
+            }
+        ],
+        imageLink: "images/codenexus.png",
+        alignLeft: true
+    },
+    {
+        projectName: "Smart Hiring -- ML Resume Screening",
+        description: "Built a resume-screening application that classifies resumes into 25 job categories. Trained and evaluated an NLTK and scikit-learn pipeline using TF-IDF, achieving 95% test accuracy across 962 records, and made predictions available through a Streamlit app.",
+        techStack: "Python, Streamlit, NLTK, scikit-learn, TF-IDF",
+        links: [
+            {
+                label: "GitHub",
+                type: "git",
+                url: "https://github.com/prashantbhadoria19/Smart-Hiring"
             }
         ],
         imageLink: "images/project1.png",
         alignLeft: false
     },
     {
-        projectName: "•	MOVIREC (Mini Project)",
+        projectName: "MOVIREC -- Movie Recommendation System",
         yearCompleted: "2023",
-        description: "o	Designed and implemented a Movie Recommendation System as a mini-project using Python, Streamlit, and Heroku. Leveraging scikit-learn for collaborative filtering algorithms and the dataset for training. This platform allows users to input their movie preferences, receiving instant, personalized recommendations.",
-        techStack: "Python, NumPy, MatplotLib, Seaborn, NLKT, Streamlit, Heroku",
-        links: [
-            {
-                label: "",
-                type: "external",
-                url: ""
-            }
-        ],
+        description: "Built a movie recommendation app that lets users choose a movie and receive personalized recommendations. Implemented the recommendation workflow in Python and deployed the interactive app with Streamlit.",
+        techStack: "Python, scikit-learn, Streamlit, NumPy, Matplotlib, Seaborn",
+        links: [],
         imageLink: "images/project2.jpg",
         alignLeft: true
     },
     {
         projectName: "Sudoku Game & Solver",
         yearCompleted: "2022",
-        description: "Built a Sudoku game UI incorporating the Java Swing library. Randomly generates a Sudoku puzzle and solves itself using the backtracking algorithm written in Java..",
-        techStack: "Java",
+        description: "Built a Java Swing Sudoku game that generates puzzles and solves them with a backtracking algorithm.",
+        techStack: "Java, Java Swing, Backtracking",
         links: [
             {
-                label: "",
+                label: "GitHub",
                 type: "git",
                 url: "https://github.com/prashantbhadoria19/Sudoku-Solver"
-            },
-            {
-                label: "",
-                type: "external",
-                url: ""
             }
         ],
         imageLink: "images/sudoku_pic.png",
+        imageMaxHeight: "19.8rem",
         alignLeft: false
     },
 ]
 
-const archiveLink = "https://github.com/feifyKike?tab=repositories"
+const archiveLink = "https://github.com/prashantbhadoria19?tab=repositories"
+
+const certificationsAndAchievements = [
+    {
+        category: "Certification",
+        title: "Claude Certified Developer -- Foundations (CCDV-F)",
+        description: "Anthropic, 2026"
+    },
+    {
+        category: "Competitive Programming",
+        title: "400+ LeetCode & 300+ GeeksforGeeks problems solved",
+        description: "LeetCode contest rating: 1900+"
+    },
+    {
+        category: "Hackathon",
+        title: "Smart India Hackathon 2023 -- University-Level Winner",
+        description: "Hardware & Software Edition"
+    }
+]
 
 // --- 📭 Contact Section ---
 // 2 Options available - Choose 1
 const contact = {
-    externalLink: {
-        shortTitle: "Get in Touch",
-        note: [
-            "Currently seeking web and software development positions/internships in the RTP area for summer 2024.",
-            "Also looking to build a team for projects & startup ideas or just make professional connections."
-        ], // paragraph breaks will be entered after each item,
-        link: {
-            email: "", // email takes precedance
-            other: "https://docs.google.com/forms/d/e/1FAIpQLSdTejen8qkSbMLvLa8dRfEWIjnJ65MBhe0GJskzCLuO7vpwJQ/viewform?usp=sf_link"
+    intro: "Have a role, project, or idea in mind? Feel free to get in touch.",
+    email: "prashantbhadoria1902@gmail.com",
+    phone: "+91-6306043361",
+    location: "Bengaluru, Karnataka, India",
+    links: [
+        {
+            label: "LinkedIn",
+            url: "https://www.linkedin.com/in/prashant-bhadoria-5b26ba218/"
         },
-        responseTimeMessage: "...and I'll resopnd within the next 24hrs"
-    },
-    formEmbedLink: "" // inclusion of this link will take precedance
+        {
+            label: "GitHub",
+            url: "https://github.com/prashantbhadoria19"
+        },
+        {
+            label: "LeetCode",
+            url: "https://leetcode.com/u/zh9wYwoXuj/"
+        },
+        {
+            label: "GeeksforGeeks",
+            url: "https://www.geeksforgeeks.org/profile/prashant_bhadoria_19"
+        }
+    ]
 }
 
 export default {
@@ -170,5 +260,6 @@ export default {
     experiences,
     works,
     archiveLink,
+    certificationsAndAchievements,
     contact
 }
