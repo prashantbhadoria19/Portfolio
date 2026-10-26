@@ -20,7 +20,7 @@
                     <img :src="getImageUrl(content.photo1Link)" alt="Prashant Bhadoria photo 1" class="h-48 sm:h-64 xl:h-full min-h-0 w-full object-cover shadow-md" loading="lazy"/>
                     <img :src="getImageUrl(content.photo2Link)" alt="Prashant Bhadoria photo 2" class="h-48 sm:h-64 xl:h-full min-h-0 w-full object-cover shadow-md" loading="lazy"/>
                     <img :src="getImageUrl(content.photo3Link)" alt="Prashant Bhadoria photo 3" class="h-48 sm:h-64 xl:h-full min-h-0 w-full object-cover shadow-md" loading="lazy"/>
-                    <img :src="getImageUrl(content.photo4Link)" alt="Prashant Bhadoria photo 4" class="h-48 sm:h-64 xl:h-full min-h-0 w-full object-cover shadow-md" loading="lazy"/>
+                    <img :src="getImageUrl(content.photo4Link)" alt="Prashant Bhadoria playing badminton" class="h-48 sm:h-64 xl:h-full min-h-0 w-full object-cover object-top shadow-md" loading="lazy"/>
                 </div>
             </div>
         </div>
